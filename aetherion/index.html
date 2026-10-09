@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aetherion transforming capsule concept: symmetrical folding wings, deployment storyboard, blueprint, proposed electronics, and engineering roadmap.">
+<meta name="theme-color" content="#080e16">
+<title>Aetherion — Folding-Wing Capsule | Nickolas Yukhnevich</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/project-data.js">
+</script>
+<script defer src="../assets/app.js">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+<div class="header-inner">
+<a class="brand" href="../index.html">
+<span class="monogram" aria-hidden="true">NY</span>Nickolas Yukhnevich</a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+<a href="../index.html#projects" >Projects</a>
+<a href="../index.html#about">About</a>
+<a href="#contact">Contact</a>
+<a class="nav-download" href="../assets/Nickolas_Yukhnevich_Engineering_Portfolio.pdf" download="Nickolas_Yukhnevich_Engineering_Portfolio.pdf" type="application/pdf">Portfolio PDF</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<section class="case-top">
+<div class="breadcrumb">
+<a href="../index.html">Portfolio</a> / Aetherion</div>
+<span class="eyebrow">Independent project / Electromechanical Design</span>
+<h1>Aetherion</h1>
+<p class="case-subtitle">A transforming capsule concept with four symmetrically deployable wings.</p>
+<div class="case-summary">
+<p>Aetherion explores a transition from a compact capsule to a four-wing configuration. The visual study centers on consistent wing shape, symmetric deployment, and a sequence that could later be implemented through mechanical linkages, position sensing, and embedded control.</p>
+<dl class="project-facts">
+<div>
+<dt>Role</dt>
+<dd>Independent concept designer</dd>
+</div>
+<div>
+<dt>Engineering approach</dt>
+<dd>Electrical and mechanical system integration</dd>
+</div>
+<div>
+<dt>Control strategy</dt>
+<dd>Coordinated actuation</dd>
+</div>
+<div>
+<dt>Next milestone</dt>
+<dd>Full Deployment</dd>
+</div>
+</dl>
+</div>
+</section>
+<figure class="hero-image">
+<img src="../assets/aetherion-hero.png" alt="Aetherion compact and deployed concept renderings" class="" fetchpriority="high" decoding="async">
+<figcaption class="image-bar">
+<strong>AETHERION / CONFIGURATION EXPLORATION</strong>
+<span>Deployable Folding-Wing Capsule · Deployment Sequence</span>
+</figcaption>
+</figure>
+<nav class="case-nav" aria-label="Case study sections">
+<a href="#design">Design intent</a>
+<a href="#deployment">Deployment</a>
+<a href="#blueprint">Blueprint</a>
+<a href="#electronics">Electrical systems</a>
+<a href="#development">Development plan</a>
+<a href="#validation">Validation</a>
+</nav>
+</div>
+<section class="section" id="design">
+<div class="wrap">
+<div class="body-grid">
+<div class="label">
+<span class="eyebrow">01 / Design intent</span>
+<h2>A compact envelope.<br>A deliberate<br>transformation.</h2>
+</div>
+<div class="copy">
+<p>Aetherion is a transforming capsule concept featuring four symmetrically arranged folding wings. Its design emphasizes compact packaging, consistent wing geometry, clearance around the wing roots, and retention of the deployed configuration.</p>
+<p>The project integrates these mechanical considerations with a proposed electrical architecture for position sensing, coordinated actuation, and deployment-state monitoring. Configuration drawings, system diagrams, and a transformation storyboard illustrate how sensor feedback and control logic would support consistent wing movement and identify incomplete or uneven deployment.</p>
+<div class="numbered">
+<div class="design-row">
+<div>
+<h3>Four repeated wing elements</h3>
+<p>The visual arrangement uses four symmetrically distributed wing petals around the capsule; equal shape and spacing are the starting geometry requirements.</p>
+</div>
+</div>
+<div class="design-row">
+<div>
+<h3>Compact-to-open transition</h3>
+<p>The closed concept brings the wing surfaces close to the body, while the deployed concept separates them into a wider configuration.</p>
+</div>
+</div>
+<div class="design-row">
+<div>
+<h3>Controlled motion and retention</h3>
+<p>The engineering phase must define hinge axes, clearance, hard stops, latching, and the means of retaining each configuration.</p>
+</div>
+</div>
+<div class="design-row">
+<div>
+<h3>Balanced deployment</h3>
+<p>The proposed control logic compares wing position feedback to detect incomplete or uneven movement and confirms deployment only when all wings reach their designated positions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="deployment">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">02 / Visual development</span>
+<h2>A transformation,<br>frame by frame.</h2>
+</div>
+<p>The ten-frame concept storyboard records the intended progression from compact packaging to open wings. Select a frame to read the engineering question associated with that stage.</p>
+</div>
+<figure class="full-image">
+<img src="../assets/aetherion-sequence.png" alt="Ten-frame concept storyboard of a capsule unfolding into four symmetrical wings" class="" loading="lazy" decoding="async">
+</figure>
+<div class="sequence-grid" aria-label="Storyboard frames">
+<button data-frame="1" aria-pressed="true" aria-label="Read storyboard frame 1">01</button>
+<button data-frame="2" aria-pressed="false" aria-label="Read storyboard frame 2">02</button>
+<button data-frame="3" aria-pressed="false" aria-label="Read storyboard frame 3">03</button>
+<button data-frame="4" aria-pressed="false" aria-label="Read storyboard frame 4">04</button>
+<button data-frame="5" aria-pressed="false" aria-label="Read storyboard frame 5">05</button>
+<button data-frame="6" aria-pressed="false" aria-label="Read storyboard frame 6">06</button>
+<button data-frame="7" aria-pressed="false" aria-label="Read storyboard frame 7">07</button>
+<button data-frame="8" aria-pressed="false" aria-label="Read storyboard frame 8">08</button>
+<button data-frame="9" aria-pressed="false" aria-label="Read storyboard frame 9">09</button>
+<button data-frame="10" aria-pressed="false" aria-label="Read storyboard frame 10">10</button>
+</div>
+<div class="sequence-description" aria-live="polite">
+<strong id="frame-number">01</strong>
+<div>
+<h3 id="frame-title">Compact configuration</h3>
+<p id="frame-copy">The capsule establishes the stowed envelope; a CAD model would define how wing thickness and hinge packaging fit inside this profile.</p>
+</div>
+</div>
+<p class="caption">The concept storyboard illustrates the transition from compact stowage to the intended deployed configuration, highlighting wing alignment, symmetry, and the opening sequence.</p>
+</div>
+</section>
+<section class="section" id="blueprint">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">03 / Concept blueprint</span>
+<h2>Four wings.<br>One integrated design.</h2>
+</div>
+<p>The project-specific drawing shows the capsule’s pointed upper and lower ends, longitudinal folding wing panels, mirrored deployed front view, and four-wing axial projection.</p>
+</div>
+<div class="blueprint-panel">
+<div class="diagram-top">
+<span>AETHERION / CONFIGURATION STUDY</span>
+<span>REFERENCE / 01</span>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Aetherion folding-wing capsule blueprint with pointed ends, mirrored front view and four-wing end projection">
+<title>Aetherion folding-wing capsule blueprint with pointed ends, mirrored front view and four-wing end projection</title>
+<defs>
+<pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+<path d="M30 0H0V30" fill="none" stroke="#64798f" stroke-opacity=".12"/>
+</pattern>
+</defs>
+<rect width="1200" height="780" fill="#0d141b"/>
+<rect width="1200" height="780" fill="url(#grid)"/>
+<defs>
+<path id="capsule-body" d="M0-185Q38-150 46-90L46 85Q38 145 0 185Q-38 145-46 85L-46-90Q-38-150 0-185Z"/>
+<path id="folding-wing-front" d="M-56-75L-168-185Q-190-65-173 40Q-154 132-117 182L-53 76Q-89 0-56-75Z"/>
+<path id="wing-end-projection" d="M-10-45L-23-145L0-200L23-145L10-45Z"/>
+</defs>
+<text x="45" y="45" font-family="Arial,sans-serif" font-size="22" fill="#cdd8e2">AETHERION / FOLDING-WING CAPSULE</text>
+<text x="45" y="73" font-family="Arial,sans-serif" font-size="13" fill="#8799aa">PROJECT-SPECIFIC CONFIGURATION DRAWING</text>
+<text x="62" y="126" font-family="Arial,sans-serif" font-size="16" fill="#cdd8e2">STOWED / FRONT VIEW</text>
+<text x="422" y="126" font-family="Arial,sans-serif" font-size="16" fill="#cdd8e2">DEPLOYED / FRONT VIEW</text>
+<text x="855" y="126" font-family="Arial,sans-serif" font-size="16" fill="#cdd8e2">DEPLOYED / END VIEW</text>
+<g transform="translate(193 338)">
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<use href="#capsule-body" fill="#15212c"/>
+<path d="M0-185V185" stroke-dasharray="5 7" opacity=".4"/>
+<path d="M-35-120Q-80 0-35 115M35-120Q80 0 35 115"/>
+<path d="M-44-90H44M-44 85H44"/>
+</g>
+</g>
+<g transform="translate(577 338)">
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<use href="#capsule-body" fill="#15212c"/>
+<use href="#folding-wing-front" fill="#20303e" fill-opacity=".45"/>
+<use href="#folding-wing-front" transform="scale(-1 1)" fill="#20303e" fill-opacity=".45"/>
+<path d="M-46-90L-140-139M-46 85L-120 135M46-90L140-139M46 85L120 135"/>
+<path d="M-47-35H47M-47 35H47"/>
+<path d="M0-205V205" stroke-dasharray="6 8" opacity=".4"/>
+<path d="M-23-146L-30-25L-21 130M23-146L30-25L21 130" stroke-dasharray="6 7" opacity=".5"/>
+</g>
+</g>
+<g transform="translate(987 338)">
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<circle r="46"/>
+<circle r="33"/>
+<path d="M-208 0H208M0-208V208" stroke-dasharray="6 8" opacity=".35"/>
+</g>
+<use href="#wing-end-projection" transform="rotate(0)" fill="#a4bacb" fill-opacity=".1" stroke="#c0d0df" stroke-width="1.8"/>
+<use href="#wing-end-projection" transform="rotate(90)" fill="#a4bacb" fill-opacity=".1" stroke="#c0d0df" stroke-width="1.8"/>
+<use href="#wing-end-projection" transform="rotate(180)" fill="#a4bacb" fill-opacity=".1" stroke="#c0d0df" stroke-width="1.8"/>
+<use href="#wing-end-projection" transform="rotate(270)" fill="#a4bacb" fill-opacity=".1" stroke="#c0d0df" stroke-width="1.8"/>
+</g>
+<text x="67" y="578" font-family="Arial,sans-serif" font-size="15" fill="#cdd8e2">Pointed upper and lower ends</text>
+<text x="67" y="604" font-family="Arial,sans-serif" font-size="13" fill="#8799aa">Wing surfaces follow the stowed envelope.</text>
+<text x="413" y="578" font-family="Arial,sans-serif" font-size="15" fill="#cdd8e2">Mirrored folding wing panels</text>
+<text x="413" y="604" font-family="Arial,sans-serif" font-size="13" fill="#8799aa">Two visible wings; concealed panels indicated.</text>
+<text x="840" y="578" font-family="Arial,sans-serif" font-size="15" fill="#cdd8e2">4-wing symmetry / 90° spacing</text>
+<text x="840" y="604" font-family="Arial,sans-serif" font-size="13" fill="#8799aa">Axial projection of wing spans.</text>
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<path d="M50 650H1150" stroke="#344556"/>
+</g>
+<text x="50" y="683" font-family="Arial,sans-serif" font-size="17" fill="#cdd8e2">Folding panels extend alongside the capsule; wing outline is distinct from Inhaler blades.</text>
+</svg>
+</div>
+<a class="inline-link" href="../assets/aetherion-blueprint.svg" download="Aetherion-concept-blueprint.svg">Download blueprint</a>
+<p class="caption">Concept schematic illustrating capsule geometry, wing symmetry, and deployment configurations.</p>
+</div>
+</section>
+<section class="section" id="electronics">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">04 / Integration plan</span>
+<h2>From deployment intent<br>to position feedback.</h2>
+</div>
+<p>The proposed electronics would manage a bench deployment mechanism. Power requirements, actuator architecture, and sensing should be selected together with the hinge design.</p>
+</div>
+<div class="blueprint-panel">
+<div class="diagram-top">
+<span>PROPOSED ELECTRICAL ARCHITECTURE</span>
+<span>BLOCK DIAGRAM / 02</span>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 350" role="img" aria-label="Proposed power and deployment control architecture">
+<defs>
+<marker id="arrow-aetherion" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0 0L10 5L0 10Z" fill="#a6ccf3"/>
+</marker>
+</defs>
+<g fill="#102c49" stroke="#93bce6" stroke-width="1.5">
+<rect x="35" y="45" width="230" height="80" rx="3"/>
+<rect x="35" y="205" width="230" height="85" rx="3"/>
+<rect x="435" y="205" width="230" height="85" rx="3"/>
+<rect x="835" y="205" width="230" height="85" rx="3"/>
+</g>
+<g fill="#dbebfb" font-family="Arial,sans-serif" font-size="21" text-anchor="middle">
+<text x="150" y="81">Protected power input</text>
+<text x="150" y="106" font-size="16">Regulation + current sensing</text>
+<text x="150" y="239">Microcontroller</text>
+<text x="150" y="267" font-size="16">Deployment state machine</text>
+<text x="550" y="239">Actuator driver</text>
+<text x="550" y="267" font-size="16">Selected after load analysis</text>
+<text x="950" y="239">Hinges + position sensors</text>
+<text x="950" y="267" font-size="16">Mechanical interface</text>
+</g>
+<g stroke="#a6ccf3" stroke-width="2" fill="none" marker-end="url(#arrow-aetherion)">
+<path d="M150 125V205"/>
+<path d="M265 85H550V205"/>
+<path d="M265 248H435"/>
+<path d="M665 248H835"/>
+<path d="M950 205V155H150V205"/>
+</g>
+<g fill="#99b7d6" font-family="monospace" font-size="15">
+<text x="350" y="145">Position feedback / fault detection</text>
+<text x="292" y="233">Command</text>
+<text x="700" y="233">Drive</text>
+</g>
+</svg>
+</div>
+<div class="two-columns" style="margin-top:45px">
+<div>
+<h3>Mechanical engineering focus</h3>
+<ul class="spec-list">
+<li>
+<strong>Wing-root and linkage geometry</strong>Develop the folding-wing assembly in SolidWorks, checking the complete swept volume, root clearances, and the transition into the open hard-stop position.</li>
+<li>
+<strong>Structural and packaging study</strong>Compare material and hinge concepts against the intended bench loads; use a simplified MATLAB motion model to organize angle, travel, and timing requirements.</li>
+</ul>
+</div>
+<div>
+<h3>Electrical engineering focus</h3>
+<ul class="spec-list">
+<li>
+<strong>Proposed controller and feedback</strong>Evaluate an ESP32-based C++ prototype with separate wing-position inputs and a deployment state machine that distinguishes commanded motion from confirmed position.</li>
+<li>
+<strong>Proposed PCB workflow</strong>Use KiCad for a future two-layer interface board after selecting actuators, with driver connections, regulated logic power, sensor inputs, and accessible bench-test points.</li>
+</ul>
+</div>
+</div>
+<div class="callout">
+<strong>Engineering approach:</strong> Proposed software, controller, and PCB architecture for coordinated actuation, sensor feedback, and deployment monitoring.</div>
+</div>
+</section>
+<section class="section" id="development">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">05 / Development process</span>
+<h2>Turn the storyboard<br>into an engineering plan.</h2>
+</div>
+<p> The development plan centers on a controlled bench mechanism to evaluate deployment consistency, sensor feedback, and coordinated actuation.</p>
+</div>
+<div class="step-list">
+<div class="step">
+<span class="step-num">01</span>
+<div>
+<h3>Establish the visual concept</h3>
+<p>Define the compact capsule and the intended four-wing arrangement, focusing on symmetry and consistent repeated geometry.</p>
+</div>
+<span class="step-status">Concept established</span>
+</div>
+<div class="step">
+<span class="step-num">02</span>
+<div>
+<h3>Document the intended sequence</h3>
+<p>Use the ten-frame storyboard to communicate the transformation and identify the points where clearance, hinge travel, and retention need engineering definition.</p>
+</div>
+<span class="step-status">Visual study</span>
+</div>
+<div class="step">
+<span class="step-num">03</span>
+<div>
+<h3>Model the wing assembly</h3>
+<p>Create the parametric geometry, define hinge coordinates and stops, and inspect the swept volume throughout the complete opening and closing sequence.</p>
+</div>
+<span class="step-status">Engineering Scope</span>
+</div>
+<div class="step">
+<span class="step-num">04</span>
+<div>
+<h3>Build a single-wing fixture</h3>
+<p>Measure hinge travel, required actuation force, backlash, and stop behavior on one wing before assembling the complete mechanism.</p>
+</div>
+<span class="step-status">Engineering Scope</span>
+</div>
+<div class="step">
+<span class="step-num">05</span>
+<div>
+<h3>Implement synchronized bench deployment</h3>
+<p>Integrate the chosen actuator architecture and position sensors; compare feedback against commanded states and handle incomplete deployment explicitly.</p>
+</div>
+<span class="step-status">Engineering Scope</span>
+</div>
+<div class="step">
+<span class="step-num">06</span>
+<div>
+<h3>Record repeatability and fault behavior</h3>
+<p>Run defined deployment cycles, inspect wear, and document position agreement, timing, current, and controlled fault responses.</p>
+</div>
+<span class="step-status">Engineering Scope</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="validation">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">06 / Verification plan</span>
+<h2>Prove the mechanism<br>before expanding its role.</h2>
+</div>
+<p>The proposed test plan evaluates unobstructed movement, accurate position sensing, and consistent locking in the deployed configuration.</p>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th scope="col">Engineering question</th>
+<th scope="col">Proposed method</th>
+<th scope="col">Evidence to record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wing clearance</td>
+<td>Inspect the CAD swept volume and slowly cycle a physical fixture.</td>
+<td>Interference locations, clearance measurements, and geometry revisions.</td>
+</tr>
+<tr>
+<td>Deployment symmetry</td>
+<td>Measure each wing angle across repeated bench cycles.</td>
+<td>Relative angle differences, timing variation, and root backlash.</td>
+</tr>
+<tr>
+<td>Open-state retention</td>
+<td>Apply defined bench loads to the stopped or latched assembly.</td>
+<td>Deflection, latch behavior, and any permanent deformation.</td>
+</tr>
+<tr>
+<td>Electrical behavior</td>
+<td>Measure actuator current and sensor outputs throughout travel.</td>
+<td>Peak current, supply variation, position consistency, and thermal observations.</td>
+</tr>
+<tr>
+<td>Deployment Verification</td>
+<td>Introduce a controlled obstruction or disconnect a position signal.</td>
+<td>Fault recognition, shutdown behavior, status reporting, and recovery steps.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<div class="wrap">
+<div class="next-project">
+<div>
+<span class="eyebrow">Lead project / 01</span>
+<h3>Inhaler</h3>
+</div>
+<a class="inline-link" href="../inhaler/index.html">Explore the deployable-blade capsule</a>
+</div>
+</div>
+<section class="section contact" id="contact">
+<div class="wrap">
+<span class="eyebrow">Engineering internships / U.S. citizen</span>
+<h2>Let’s discuss engineering opportunities.</h2>
+<p class="intro">I’m seeking opportunities to learn from teams developing electrical hardware, embedded systems, and integrated electromechanical products.</p>
+<div class="contact-links">
+<a href="mailto:nickolas.yukhnevich@gmail.com">nickolas.yukhnevich@gmail.com</a>
+<a href="https://www.linkedin.com/in/nickolasyukhnevich/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<span>© 2026 Nickolas Yukhnevich</span>
+<span>Independent engineering concepts / Design portfolio</span>
+</footer>
+</body>
+</html>

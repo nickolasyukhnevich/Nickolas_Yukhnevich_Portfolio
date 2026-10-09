@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Inhaler engineering concept: eight rear-hinged blade panels, mechanism designs, proposed electronics, and prototype development plan.">
+<meta name="theme-color" content="#080e16">
+<title>Inhaler — Deployable-Blade Capsule | Nickolas Yukhnevich</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/project-data.js">
+</script>
+<script defer src="../assets/app.js">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+<div class="header-inner">
+<a class="brand" href="../index.html">
+<span class="monogram" aria-hidden="true">NY</span>Nickolas Yukhnevich</a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+<a href="../index.html#projects" >Projects</a>
+<a href="../index.html#about">About</a>
+<a href="#contact">Contact</a>
+<a class="nav-download" href="../assets/Nickolas_Yukhnevich_Engineering_Portfolio.pdf" download="Nickolas_Yukhnevich_Engineering_Portfolio.pdf" type="application/pdf">Portfolio PDF</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+<section class="case-top">
+<div class="breadcrumb">
+<a href="../index.html">Portfolio</a> / Inhaler</div>
+<span class="eyebrow">Independent project / Concept development</span>
+<h1>Inhaler</h1>
+<p class="case-subtitle">A deployable-blade capsule with an exposed internal compartment in the open configuration.</p>
+<div class="case-summary">
+<p>Inhaler features eight blade panels designed to stow along a capsule and rotate outward, opening shell apertures that reveal the engine compartment between fixed body strips. The design provides a foundation for physical implementation through integrated hinges, actuators, position sensors, and an embedded controller, with prototyping and testing to verify reliable operation.</p>
+<dl class="project-facts">
+<div>
+<dt>Role</dt>
+<dd>Independent concept designer</dd>
+</div>
+<div>
+<dt>Stage</dt>
+<dd>Final Design</dd>
+</div>
+<div>
+<dt>Focus</dt>
+<dd>Radial deployment &amp; packaging</dd>
+</div>
+<div>
+<dt>Next milestone</dt>
+<dd>Implementation</dd>
+</div>
+</dl>
+</div>
+</section>
+<figure class="hero-image">
+<div class="capsule-comparison">
+<img src="../assets/inhaler-closed-open.png" alt="Inhaler comparison with the closed capsule on the left and the open capsule on the right, matched golden studio lighting, and blade-shaped body openings" fetchpriority="high" decoding="async">
+<div class="comparison-labels">
+<span>01 / CLOSED CONFIGURATION</span>
+<span>02 / OPEN CONFIGURATION</span>
+</div>
+</div>
+<figcaption class="image-bar">
+<strong>INHALER / CLOSED &amp; OPEN CONFIGURATIONS</strong>
+</figcaption>
+</figure>
+<nav class="case-nav" aria-label="Case study sections">
+<a href="#design">Design intent</a>
+<a href="#views">Front &amp; side views</a>
+<a href="#deployment">Deployment</a>
+<a href="#blueprint">Blueprint</a>
+<a href="#electronics">Electrical systems</a>
+<a href="#development">Development plan</a>
+<a href="#validation">Validation</a>
+</nav>
+</div>
+<section class="section" id="design">
+<div class="wrap">
+<div class="body-grid">
+<div class="label">
+<span class="eyebrow">01 / Design intent</span>
+<h2>One compact body.<br>Eight repeated<br>moving elements.</h2>
+</div>
+<div class="copy">
+<p>The compact configuration alternates deployable blade panels with fixed body strips. Opening the blades uncovers their original shell apertures: these gaps remain open and reveal the internal engine compartment, rather than closing behind the moving panels.</p>
+<p>My contribution at this stage is the mechanism design: refining the repeated blade shape, the spacing between elements, and the visual relationship between the closed capsule and the open arrangement.</p>
+<div class="numbered">
+<div class="design-row">
+<div>
+<h3>Alternating fixed and moving surfaces</h3>
+<p>Fixed body strips remain between neighboring blade panels. The target body opening follows the curved outline, sweep, and tapered tip of its blade panel while stowed, revealing the engine compartment when the blade deploys.</p>
+</div>
+</div>
+<div class="design-row">
+<div>
+<h3>Rear-mounted hinges</h3>
+<p>Each blade is intended to pivot near the rear ring through a nominal 0°–90° travel.</p>
+</div>
+</div>
+<div class="design-row">
+<div>
+<h3>Consistent repeated geometry</h3>
+<p>The target array uses eight identical blade shapes at 45° intervals, with equal radial reach and tips on a common circle. At full deployment, the array lies in a plane perpendicular to the capsule axis.</p>
+</div>
+</div>
+<div class="design-row">
+<div>
+<h3>Compact stowage envelope</h3>
+<p>Folded panels follow the intended body profile; a dimensional CAD model must check panel thickness, hinge intrusion, tip clearance, and tolerance accumulation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section geometry-showcase" id="views">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">CONFIGURATION VIEWS / FRONT · REAR · SIDE</span>
+<h2>One blade profile.<br>Eight radial positions.</h2>
+</div>
+<p>The front view communicates the circular array. The side elevation shows the same array edge-on, perpendicular to the capsule axis. Lower blades keep their intended shape; no surface contact is part of the deployed configuration.</p>
+</div>
+<div class="geometry-layout">
+<figure class="front-figure">
+<a href="../assets/inhaler-front.png" class="figure-link" target="_blank" rel="noopener noreferrer" aria-label="Open the full Inhaler front view">
+<img src="../assets/inhaler-front.png" alt="Inhaler front view from the nose end, showing eight deployed curved blades around the central capsule" loading="lazy" decoding="async">
+</a>
+<figcaption>
+<span>01 / FRONT VIEW — NOSE END</span>
+<span>Concept visualization</span>
+</figcaption>
+</figure>
+<div class="geometry-notes">
+<span class="eyebrow">DEPLOYED CONFIGURATION</span>
+<div class="geometry-rule">
+<strong>Repeated blade geometry</strong>
+<p>Each intended blade uses the same swept profile, chord, and radial length. The technical drawing repeats one definition eight times.</p>
+</div>
+<div class="geometry-rule">
+<strong>Equal angular spacing</strong>
+<p>Blade positions are distributed at 45° intervals around the rear ring, with their tips on one circular envelope.</p>
+</div>
+<div class="geometry-rule">
+<strong>One deployment plane</strong>
+<p>The fully opened array lies perpendicular to the longitudinal body axis. A side view changes the projection, not the lower blade shapes.</p>
+</div>
+<div class="geometry-rule">
+<strong>Open body apertures</strong>
+<p>The target aperture follows its corresponding blade’s stowed outline. The fixed strips remain between the openings, revealing the internal compartment when the panels deploy.</p>
+</div>
+</div>
+</div>
+<figure class="orthographic-figure">
+<a href="../assets/inhaler-side-engine-board.png" class="figure-link" target="_blank" rel="noopener noreferrer" aria-label="Open the front, rear, and side configuration board">
+<div class="engine-board-composite">
+<div class="board-upper">
+<img src="../assets/inhaler-multiview.png" alt="Original Inhaler front and rear views, preserved from the approved configuration board" loading="lazy" decoding="async">
+</div>
+<div class="board-lower">
+<img src="../assets/inhaler-side-engine-board.png" alt="Refined side view of Inhaler with all blades deployed and a shaded three-dimensional internal machinery concept" loading="lazy" decoding="async">
+</div>
+</div>
+</a>
+<figcaption>
+<span>02 / FRONT, REAR &amp; SIDE REFERENCE</span>
+<span>Refined engine-compartment visualization</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="section light-section" id="deployment">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">02 / Intended motion</span>
+<h2>Explore the<br>deployment sequence.</h2>
+</div>
+<p>Use the slider to explore the stowed, intermediate, and fully deployed positions. The schematic highlights uniform blade spacing and equal radial reach, while the side blueprint illustrates the shell openings that expose the internal compartment.</p>
+</div>
+<div class="study-layout">
+<div class="blueprint-panel">
+<div class="diagram-top">
+<span>INHALER / END-VIEW PROJECTION</span>
+<span id="diagram-angle">0° / STOWED</span>
+</div>
+<svg id="deployment-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 550" role="img" aria-labelledby="deployment-title">
+<title id="deployment-title">Schematic projection of eight blade positions at the selected deployment angle</title>
+<defs>
+<pattern id="deployment-grid" width="25" height="25" patternUnits="userSpaceOnUse">
+<path d="M25 0H0V25" fill="none" stroke="#80acd9" stroke-opacity=".13"/>
+</pattern>
+</defs>
+<rect width="650" height="550" fill="url(#deployment-grid)"/>
+<g transform="translate(325 250)">
+<circle r="72" fill="none" stroke="#acd2f5" stroke-width="3"/>
+<circle r="64" fill="none" stroke="#708da6" stroke-dasharray="4 8"/>
+<circle r="28" fill="#24303b" stroke="#c4d0db" stroke-width="2"/>
+<circle r="50" fill="none" stroke="#6e9bc6" stroke-width="1.5"/>
+<circle r="195" fill="none" stroke="#547da5" stroke-dasharray="5 8"/>
+<path d="M-225 0H225M0-225V225" stroke="#769abe" stroke-dasharray="5 8" opacity=".5"/>
+<g id="blade-projections">
+</g>
+<circle r="6" fill="#e6f3ff"/>
+</g>
+<text x="28" y="505" fill="#99b9d8" font-family="monospace" font-size="14">Rear-ring projection / 8 identical blade positions</text>
+<text x="28" y="528" fill="#99b9d8" font-family="monospace" font-size="14">Dashed circle: common blade-tip envelope</text>
+</svg>
+</div>
+<div class="study-controls">
+<span class="eyebrow">Intended travel / 0°–90°</span>
+<h3>Blade opening angle</h3>
+<output class="angle" id="angle-output" for="deployment-angle">0<small>°</small>
+</output>
+<label for="deployment-angle">Adjust nominal deployment angle</label>
+<input id="deployment-angle" type="range" min="0" max="90" step="1" value="0">
+<div class="range-limits">
+<span>0° / Stowed</span>
+<span>90° / Open</span>
+</div>
+<p class="stage-title" id="deployment-state" aria-live="polite">Stowed configuration</p>
+<p id="deployment-copy">Panels cover the body apertures while stowed; opening them must expose the compartment between the fixed strips.</p>
+<div class="state-buttons">
+<button data-angle="0">Stowed</button>
+<button data-angle="45">Intermediate</button>
+<button data-angle="90">Open</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="blueprint">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">03 / Concept blueprint</span>
+<h2>The configuration,<br>clearly defined.</h2>
+</div>
+<p>The configuration drawing shows the true side projection of the deployed radial array, the remaining fixed strips, and open apertures revealing an illustrative engine-compartment envelope. The rear projection uses eight exact copies of one blade at 45° intervals.</p>
+</div>
+<div class="blueprint-panel">
+<div class="diagram-top">
+<span>INHALER / GEOMETRY STUDY</span>
+<span>REFERENCE / 01</span>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Inhaler configuration drawing: open body apertures and eight identical radial blades">
+<title>Inhaler configuration drawing: open body apertures and eight identical radial blades</title>
+<defs>
+<pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+<path d="M30 0H0V30" fill="none" stroke="#64798f" stroke-opacity=".12"/>
+</pattern>
+</defs>
+<rect width="1200" height="750" fill="#0d141b"/>
+<rect width="1200" height="750" fill="url(#grid)"/>
+<defs>
+<path id="identical-blade" d="M-12-62L-18-218Q25-205 32-115Q30-81 14-62Z"/>
+</defs>
+<text x="45" y="45" font-family="Arial,sans-serif" font-size="22" fill="#cdd8e2">INHALER / OPEN-SHELL CONFIGURATION</text>
+<text x="45" y="73" font-family="Arial,sans-serif" font-size="13" fill="#8799aa">SIDE ELEVATION + REAR PROJECTION</text>
+<text x="50" y="125" font-family="Arial,sans-serif" font-size="16" fill="#cdd8e2">DEPLOYED / TRUE SIDE VIEW</text>
+<g transform="translate(0 80)">
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<path d="M80 260H580" stroke-dasharray="8 8" opacity=".4"/>
+<path d="M155 82V438" stroke="#f0f5fb" stroke-width="4"/>
+<path d="M165 95V425" stroke-dasharray="5 6"/>
+<path d="M180 205L435 205Q485 211 545 260Q485 309 435 315L180 315Z" stroke-dasharray="6 8" opacity=".5"/>
+<path d="M178 203V317M194 203V317"/>
+<path d="M435 205Q485 212 545 260Q485 308 435 315Z" fill="#15212c"/>
+<path d="M194 206Q280 225 435 207L435 222Q280 237 194 220Z" fill="#213141"/>
+<path d="M194 300Q320 282 435 301L435 315Q320 299 194 315Z" fill="#213141"/>
+<!-- Illustrative compartment envelope, deliberately visible through shell apertures. -->
+<rect x="225" y="240" width="165" height="42" rx="17" stroke="#8196a8"/>
+<path d="M240 239V283M350 239V283M389 253H433M392 267H433" stroke="#8196a8"/>
+<path d="M270 228V240M270 283V291M310 228V240M310 283V291" stroke="#8196a8"/>
+<path d="M243 218L255 177H350" stroke="#91a4b6"/>
+<path d="M310 261L345 364H445" stroke="#91a4b6"/>
+<path d="M157 350L125 467H70" stroke="#91a4b6"/>
+</g>
+<text x="355" y="182" font-family="Arial,sans-serif" font-size="15" fill="#cdd8e2">Fixed body strip</text>
+<text x="315" y="390" font-family="Arial,sans-serif" font-size="15" fill="#cdd8e2">Visible engine-compartment envelope</text>
+<text x="70" y="490" font-family="Arial,sans-serif" font-size="15" fill="#cdd8e2">Radial blades viewed edge-on</text>
+<text x="70" y="515" font-family="Arial,sans-serif" font-size="14" fill="#8799aa">All blade tips share one circular path.</text>
+</g>
+<text x="705" y="125" font-family="Arial,sans-serif" font-size="16" fill="#cdd8e2">DEPLOYED / REAR VIEW</text>
+<g transform="translate(928 350)">
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<circle r="60"/>
+<circle r="44"/>
+<circle r="218.741857" stroke-dasharray="5 7" opacity=".35"/>
+<path d="M-235 0H235M0-235V235" stroke-dasharray="6 7" opacity=".3"/>
+</g>
+<use href="#identical-blade" transform="rotate(0)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(45)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(90)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(135)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(180)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(225)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(270)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+<use href="#identical-blade" transform="rotate(315)" fill="#bacddd" fill-opacity=".12" stroke="#d0deeb" stroke-width="1.8"/>
+</g>
+<text x="740" y="595" font-family="Arial,sans-serif" font-size="17" fill="#cdd8e2">8 × identical blade geometry</text>
+<text x="740" y="619" font-family="Arial,sans-serif" font-size="14" fill="#8799aa">45° equal angular pitch / 90° intended opening</text>
+<g fill="none" stroke="#c0d0df" stroke-width="2">
+<path d="M50 650H1150" stroke="#344556"/>
+</g>
+<text x="50" y="688" font-family="Arial,sans-serif" font-size="17" fill="#cdd8e2">Open apertures remain between fixed strips after blade deployment.</text>
+<text x="50" y="720" font-family="Arial,sans-serif" font-size="12" fill="#8799aa">CONCEPT CONFIGURATION · ILLUSTRATIVE INTERNAL VOLUME · NO FABRICATION DIMENSIONS</text>
+</svg>
+</div>
+<a class="inline-link" href="../assets/inhaler-blueprint.svg" download="Inhaler-concept-blueprint.svg">Download blueprint</a>
+</div>
+</section>
+<section class="section" id="electronics">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">04 / Electrical development</span>
+<h2>A mechanism needs<br>a control strategy.</h2>
+</div>
+<p>The next phase would connect commanded movement to measured position. Component selection should follow mechanical load estimates and power requirements, rather than precede them.</p>
+</div>
+<div class="blueprint-panel">
+<div class="diagram-top">
+<span>PROPOSED ELECTRICAL ARCHITECTURE</span>
+<span>BLOCK DIAGRAM / 02</span>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 350" role="img" aria-label="Proposed power and deployment control architecture">
+<defs>
+<marker id="arrow-inhaler" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0 0L10 5L0 10Z" fill="#a6ccf3"/>
+</marker>
+</defs>
+<g fill="#102c49" stroke="#93bce6" stroke-width="1.5">
+<rect x="35" y="45" width="230" height="80" rx="3"/>
+<rect x="35" y="205" width="230" height="85" rx="3"/>
+<rect x="435" y="205" width="230" height="85" rx="3"/>
+<rect x="835" y="205" width="230" height="85" rx="3"/>
+</g>
+<g fill="#dbebfb" font-family="Arial,sans-serif" font-size="21" text-anchor="middle">
+<text x="150" y="81">Protected power input</text>
+<text x="150" y="106" font-size="16">Regulation + current sensing</text>
+<text x="150" y="239">Microcontroller</text>
+<text x="150" y="267" font-size="16">Deployment state machine</text>
+<text x="550" y="239">Actuator driver</text>
+<text x="550" y="267" font-size="16">Selected after load analysis</text>
+<text x="950" y="239">Hinges + position sensors</text>
+<text x="950" y="267" font-size="16">Mechanical interface</text>
+</g>
+<g stroke="#a6ccf3" stroke-width="2" fill="none" marker-end="url(#arrow-inhaler)">
+<path d="M150 125V205"/>
+<path d="M265 85H550V205"/>
+<path d="M265 248H435"/>
+<path d="M665 248H835"/>
+<path d="M950 205V155H150V205"/>
+</g>
+<g fill="#99b7d6" font-family="monospace" font-size="15">
+<text x="350" y="145">Position feedback / fault detection</text>
+<text x="292" y="233">Command</text>
+<text x="700" y="233">Drive</text>
+</g>
+</svg>
+</div>
+<div class="two-columns" style="margin-top:45px">
+<div>
+<h3>Mechanical engineering focus</h3>
+<ul class="spec-list">
+<li>
+<strong>Parametric CAD and interference study</strong>Build the body, rear ring, and repeated blade assembly in SolidWorks; sweep the hinge motion and check adjacent-panel clearance before producing prototype parts.</li>
+<li>
+<strong>Hinge and actuation sizing</strong>Estimate torque from geometry, friction, and representative external loading; compare independent actuators with a shared linkage before committing to hardware.</li>
+</ul>
+</div>
+<div>
+<h3>Electrical engineering focus</h3>
+<ul class="spec-list">
+<li>
+<strong>Proposed embedded control</strong>Evaluate an ESP32 development board for an initial C++ state machine with stowed, deploying, open, retracting, and fault states; confirm I/O and driver compatibility during selection.</li>
+<li>
+<strong>Proposed circuit development</strong>Use KiCad for a future schematic and two-layer prototype PCB after bench validation, with regulated power, actuator-driver interfaces, position-feedback inputs, and current monitoring.</li>
+</ul>
+</div>
+</div>
+<div class="callout">
+<strong>Tool status:</strong> SolidWorks, MATLAB, ESP32, and KiCad describe the proposed engineering workflow. This case study does not claim a completed CAD assembly, manufactured PCB, or working embedded controller.</div>
+</div>
+</section>
+<section class="section" id="development">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">05 / Development process</span>
+<h2>A step-by-step path<br>to a bench prototype.</h2>
+</div>
+<p>The sequence begins with the current configuration work and identifies the engineering evidence needed before the design can progress toward a functioning assembly.</p>
+</div>
+<div class="step-list">
+<div class="step">
+<span class="step-num">01</span>
+<div>
+<h3>Define the compact and deployed configurations</h3>
+<p>Establish the alternating fixed-panel/blade arrangement, rear-hinge concept, repeated geometry, and the intended transition between closed and open states.</p>
+</div>
+<span class="step-status">Concept established</span>
+</div>
+<div class="step">
+<span class="step-num">02</span>
+<div>
+<h3>Refine the visual design</h3>
+<p>Compare side and end views to communicate blade spacing and the deployed arrangement; use concept renderings to surface geometry questions for the CAD phase.</p>
+</div>
+<span class="step-status">Visual study</span>
+</div>
+<div class="step">
+<span class="step-num">03</span>
+<div>
+<h3>Create a parametric assembly</h3>
+<p>Set dimensions, material thicknesses, hinge axes, stops, and tolerances in CAD; use a motion study to identify collisions and inaccessible assembly features.</p>
+</div>
+<span class="step-status">Planned</span>
+</div>
+<div class="step">
+<span class="step-num">04</span>
+<div>
+<h3>Prototype one hinge and blade</h3>
+<p>Build a single-element test fixture to measure travel, friction, play, and required torque before duplicating the mechanism around the full body.</p>
+</div>
+<span class="step-status">Planned</span>
+</div>
+<div class="step">
+<span class="step-num">05</span>
+<div>
+<h3>Integrate the control and power system</h3>
+<p>Connect the selected actuator and position sensor on a development board; establish current limits, end-stop handling, and a safe response to missing feedback.</p>
+</div>
+<span class="step-status">Planned</span>
+</div>
+<div class="step">
+<span class="step-num">06</span>
+<div>
+<h3>Validate repeated deployment</h3>
+<p>Test the assembled mechanism across repeated cycles and record position consistency, cycle time, current draw, temperature, wear, and fault behavior.</p>
+</div>
+<span class="step-status">Planned</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="validation">
+<div class="wrap">
+<div class="section-heading">
+<div>
+<span class="eyebrow">06 / Verification plan</span>
+<h2>Make the next claims<br>measurable.</h2>
+</div>
+<p>A successful rendering does not establish mechanical or electrical performance. These proposed checks would produce the evidence needed to revise the design and report defensible results.</p>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th scope="col">Engineering question</th>
+<th scope="col">Proposed method</th>
+<th scope="col">Evidence to record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clearance across travel</td>
+<td>Sweep the CAD assembly and inspect a slow-moving physical fixture.</td>
+<td>Minimum separation, interference locations, and changes required.</td>
+</tr>
+<tr>
+<td>Position repeatability</td>
+<td>Record blade angle over repeated opening and closing cycles.</td>
+<td>Angle spread, end-stop consistency, and measured backlash.</td>
+</tr>
+<tr>
+<td>Actuator load and power</td>
+<td>Measure current, voltage, and motion under defined bench loads.</td>
+<td>Peak current, steady current, torque estimate, and power margin.</td>
+</tr>
+<tr>
+<td>Fault response</td>
+<td>Interrupt sensor feedback or obstruct motion under controlled bench conditions.</td>
+<td>Detection behavior, output shutdown, recovery sequence, and retained faults.</td>
+</tr>
+<tr>
+<td>Environment and materials</td>
+<td>Define operating conditions before selecting seals and conducting exposure tests.</td>
+<td>Material compatibility, enclosure requirements, and post-test inspection.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout">
+<strong>Open design question:</strong> The visible internal machinery communicates an engine-compartment envelope. Engine construction, performance, airflow, loading, and operation remain outside the current mechanism design.</div>
+</div>
+</section>
+<div class="wrap">
+<div class="next-project">
+<div>
+<span class="eyebrow">Next project / 02</span>
+<h3>Aetherion</h3>
+</div>
+<a class="inline-link" href="../aetherion/index.html">Explore the folding-wing capsule</a>
+</div>
+</div>
+<section class="section contact" id="contact">
+<div class="wrap">
+<span class="eyebrow">Engineering internships / U.S. citizen</span>
+<h2>Let’s discuss engineering<br>opportunities.</h2>
+<p class="intro">I’m seeking opportunities to learn from teams developing electrical hardware, embedded systems, and integrated electromechanical products.</p>
+<div class="contact-links">
+<a href="mailto:nickolas.yukhnevich@gmail.com">nickolas.yukhnevich@gmail.com</a>
+<a href="https://www.linkedin.com/in/nickolasyukhnevich/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<span>© 2026 Nickolas Yukhnevich</span>
+<span>Independent engineering concepts / Design portfolio</span>
+</footer>
+</body>
+</html>
